@@ -5,8 +5,7 @@ import {BiUser} from "react-icons/bi"
 import {BsCartFill} from "react-icons/bs"
 
     const Header = () => {
-    const[showMenu, setShowMenu] = useState(false);
-    const handleShowMenu = ()=>{setShowMenu(preve => !preve)}
+   
 return (
             <header className="fixed shadow-md w-full h-16 px-2 md:px-4 z-50 bg-white">
             {/*desktop*/}
@@ -27,21 +26,15 @@ return (
             <div className="absolute -top-0.5 -right-0.05 text-white bg-red-500 h-5 w-5 rounded-full m-0 p-0 text-sm text-center">0
             </div>
             </div>
-            <div className=" text-slate-600"onClick={handleShowMenu}>
+            
             <div className="text-3xl cursor-pointer" >
                 <BiUser/>
             </div>
-            {showMenu && (
-                <div className="absolute right-2 bg-white[ py-2 px-2 shadow drop-shadow-md flex flex-col">
-                <Link to={"newproduct"} className="whitespace-nowrap cursor-pointer" >New Product</Link>
-                <Link to={"login"} className="whitespace-nowrap cursor-pointer">Login</Link>
-                
-            </div>
-            )}
+            
             
             </div>
             </div>
-            </div>
+            
             {/*mobile*/}
             </header>
             )}
